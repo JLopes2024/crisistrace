@@ -1,0 +1,706 @@
+.page {
+  min-height: 100vh;
+  background: #f3f5f7;
+  color: #18212b;
+}
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px max(24px, calc((100% - 1180px) / 2));
+  background: #0e2744;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #0e2744;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.brand strong,
+.brand span {
+  display: block;
+}
+
+.brand strong {
+  font-size: 16px;
+}
+
+.brand span {
+  margin-top: 2px;
+  color: #9fb1c4;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   SESSÃO
+========================================================= */
+
+.session {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.session > div {
+  padding-right: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: right;
+}
+
+.session span,
+.session strong {
+  display: block;
+}
+
+.session span {
+  color: #91a8c0;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.session strong {
+  margin-top: 2px;
+}
+
+.session button {
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  background: transparent;
+  color: #fff;
+}
+
+.session button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   CASO
+========================================================= */
+
+.caseHeader {
+  background: #fff;
+  border-bottom: 1px solid #dbe1e7;
+}
+
+.caseHeaderContent,
+.workspace {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.caseHeaderContent {
+  padding: 38px 0 34px;
+}
+
+.caseMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #315d8e;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+
+.classification {
+  padding: 4px 7px;
+  background: #eef1f4;
+  color: #66727e;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.caseHeader h1 {
+  max-width: 780px;
+  margin: 10px 0 4px;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.04em;
+}
+
+.caseHeader p {
+  margin: 0;
+  color: #63707e;
+}
+
+.description {
+  max-width: 800px;
+  margin-top: 20px;
+  padding-left: 15px;
+  border-left: 3px solid #315d8e;
+  color: #586574;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   WORKSPACE
+========================================================= */
+
+.workspace {
+  padding: 30px 0 60px;
+}
+
+/* =========================================================
+   MÉTRICAS
+========================================================= */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.metrics article {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dbe1e7;
+  border-radius: 4px;
+}
+
+.metrics span,
+.metrics strong,
+.metrics small {
+  display: block;
+}
+
+.metrics span {
+  color: #74808c;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.metrics strong {
+  margin: 5px 0 2px;
+  color: #173b64;
+  font-size: 28px;
+}
+
+.metrics small {
+  color: #87919c;
+  font-size: 10px;
+}
+
+/* =========================================================
+   CABEÇALHO DOS REGISTROS
+========================================================= */
+
+.sectionHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 42px;
+}
+
+.sectionHeader > div > span {
+  color: #315d8e;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.sectionHeader h2 {
+  margin: 5px 0;
+  font-size: 25px;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: #6d7884;
+  font-size: 12px;
+}
+
+.sectionHeader > strong {
+  color: #6d7884;
+  font-size: 11px;
+}
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.filters {
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 1fr)
+    180px
+    180px;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px;
+  background: #e8ecf0;
+  border: 1px solid #d7dde3;
+}
+
+.filters label > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #65717e;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  height: 42px;
+  padding: 0 11px;
+  border: 1px solid #c8d0d8;
+  border-radius: 3px;
+  outline: none;
+  background: #fff;
+  color: #1c2732;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #315d8e;
+  box-shadow: 0 0 0 3px rgba(49, 93, 142, 0.08);
+}
+
+/* =========================================================
+   REGISTROS
+========================================================= */
+
+.recordList {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.record {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  background: #fff;
+  border: 1px solid #dbe1e7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.recordCode {
+  padding: 20px;
+  background: #f8f9fa;
+  border-right: 1px solid #e1e5e9;
+}
+
+.recordCode > span {
+  display: block;
+  color: #43505e;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   RISCO
+========================================================= */
+
+.risk {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 6px;
+  border-radius: 2px;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.risk_critical {
+  background: #f8dfe2;
+  color: #a41e2c;
+}
+
+.risk_high {
+  background: #f8e8d6;
+  color: #99510d;
+}
+
+.risk_medium {
+  background: #f7f0cf;
+  color: #766212;
+}
+
+.risk_low {
+  background: #e0eee5;
+  color: #2c6844;
+}
+
+/* =========================================================
+   CORPO DO REGISTRO
+========================================================= */
+
+.recordBody {
+  padding: 20px;
+}
+
+.recordHeading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.recordHeading h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.recordHeading p {
+  margin: 5px 0 0;
+  color: #7a8590;
+  font-size: 10px;
+}
+
+.preview {
+  margin: 15px 0 0;
+  color: #566270;
+  font-size: 12px;
+}
+
+.record blockquote {
+  margin: 13px 0 0;
+  padding: 12px 14px;
+  background: #f6f7f8;
+  border-left: 3px solid #9aa8b7;
+  color: #374453;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  flex-shrink: 0;
+  padding: 5px 7px;
+  border: 1px solid #d6dce2;
+  border-radius: 2px;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status_recovered {
+  color: #356447;
+  background: #edf5f0;
+}
+
+.status_removed {
+  color: #8b4c23;
+  background: #faf1e8;
+}
+
+.status_restricted {
+  color: #8a2630;
+  background: #f9e9eb;
+}
+
+/* =========================================================
+   EVIDÊNCIA
+========================================================= */
+
+.recordActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e9ed;
+}
+
+.dossierButton {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #b8c3ce;
+  border-radius: 3px;
+  background: #fff;
+  color: #4f6071;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dossierButton:hover {
+  background: #f3f5f7;
+}
+
+.evidenceButton,
+.evidenceSelected {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.evidenceButton {
+  border: 1px solid #315d8e;
+  background: #fff;
+  color: #315d8e;
+}
+
+.evidenceButton:hover {
+  background: #eef4fa;
+}
+
+.evidenceSelected {
+  border: 1px solid #48725a;
+  background: #edf5f0;
+  color: #356447;
+}
+
+.evidenceButton:disabled,
+.evidenceSelected:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+/* =========================================================
+   RODAPÉ DOS REGISTROS
+========================================================= */
+
+.record footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tags span {
+  padding: 4px 6px;
+  background: #edf0f3;
+  color: #65717e;
+  font-size: 8px;
+}
+
+.record time {
+  flex-shrink: 0;
+  color: #8a949e;
+  font-family: Consolas, monospace;
+  font-size: 9px;
+}
+
+/* =========================================================
+   ESTADO VAZIO
+========================================================= */
+
+.empty {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+  background: #fff;
+  border: 1px dashed #cbd3db;
+  color: #677380;
+}
+
+.empty strong,
+.empty span {
+  display: block;
+  text-align: center;
+}
+
+.empty span {
+  font-size: 11px;
+}
+
+/* =========================================================
+   LOADING / ERRO
+========================================================= */
+
+.statePage {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 30px;
+  background: #f3f5f7;
+  color: #263442;
+  text-align: center;
+}
+
+.statePage span {
+  color: #78838e;
+  font-size: 12px;
+}
+
+.loader {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 8px;
+  border: 3px solid #d5dce3;
+  border-top-color: #173b64;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.evidenceMetric {
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.evidenceMetric:hover {
+  transform: translateY(-2px);
+  border-color: #7896b6;
+  box-shadow: 0 5px 16px rgba(23, 59, 100, 0.08);
+}
+
+.evidenceMetric:active {
+  transform: translateY(0);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+/* =========================================================
+   MISSÃO 07
+========================================================= */
+
+.missionSection {
+  margin-top: 34px;
+}
+
+.missionSectionHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.missionSectionHeader > div > span {
+  color: #923543;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.missionSectionHeader h2 {
+  margin: 5px 0 0;
+  font-size: 21px;
+}
+
+.missionSectionHeader > strong {
+  padding: 5px 8px;
+  border: 1px solid #d7c4c7;
+  background: #f7edef;
+  color: #8d3441;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+}
+@media (max-width: 900px) {
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 12px 18px;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .caseHeaderContent,
+  .workspace {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .record {
+    grid-template-columns: 1fr;
+  }
+
+  .recordCode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-right: 0;
+    border-bottom: 1px solid #e1e5e9;
+  }
+
+  .risk {
+    margin-top: 0;
+  }
+
+  .recordHeading,
+  .record footer {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .evidenceButton,
+  .evidenceSelected {
+    width: 100%;
+  }
+}
+.session small {
+  display: block;
+  margin-top: 3px;
+  color: #9fb0c0;
+  font-size: 8px;
+  font-weight: 700;
+}

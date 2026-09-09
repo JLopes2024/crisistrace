@@ -1,0 +1,215 @@
+.dossier {
+  margin-top: 18px;
+  border: 1px solid #cfd7df;
+  background: #f8fafb;
+}
+
+.header {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  background: #182f4a;
+  color: #fff;
+}
+
+.header span {
+  color: #9eb1c4;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.header h4 {
+  margin: 3px 0 0;
+  font-family: Consolas, monospace;
+  font-size: 16px;
+}
+
+.header button {
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid #dce2e8;
+}
+
+.grid section {
+  min-width: 0;
+  padding: 16px;
+  border-right: 1px solid #dce2e8;
+}
+
+.grid section:last-child {
+  border-right: 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  color: #788491;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.grid strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #334252;
+  font-size: 11px;
+}
+
+.analysis {
+  display: grid;
+  gap: 1px;
+  background: #dce2e8;
+}
+
+.analysis section {
+  padding: 17px;
+  background: #fff;
+}
+
+.analysis p {
+  margin: 0;
+  color: #4f5e6d;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.timeline {
+  padding: 18px;
+}
+
+.timelineHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dce2e8;
+}
+
+.timelineHeading span {
+  color: #315d8e;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.timelineHeading strong {
+  color: #798591;
+  font-size: 9px;
+}
+
+.logList {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logList li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  min-height: 60px;
+}
+
+.timelineMarker {
+  width: 9px;
+  height: 9px;
+  margin-top: 2px;
+  border: 2px solid #315d8e;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.logList time {
+  color: #73808d;
+  font-family: Consolas, monospace;
+  font-size: 9px;
+}
+
+.logList p {
+  margin: 4px 0 0;
+  color: #3e4d5c;
+  font-size: 11px;
+}
+
+.logState,
+.logError {
+  margin-top: 14px;
+  padding: 13px;
+  border: 1px dashed #cbd4dd;
+  font-size: 10px;
+}
+
+.logState {
+  color: #74808c;
+}
+
+.logError {
+  background: #fff4f5;
+  color: #9b2935;
+}
+
+.actions {
+  padding: 15px 18px;
+  border-top: 1px solid #dce2e8;
+  background: #fff;
+}
+
+.select,
+.selected {
+  min-height: 36px;
+  padding: 0 13px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.select {
+  border: 1px solid #315d8e;
+  background: #fff;
+  color: #315d8e;
+}
+
+.selected {
+  border: 1px solid #48725a;
+  background: #edf5f0;
+  color: #356447;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid section {
+    border-right: 0;
+    border-bottom: 1px solid #dce2e8;
+  }
+
+  .select,
+  .selected {
+    width: 100%;
+  }
+}
