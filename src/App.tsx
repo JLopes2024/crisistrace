@@ -4,6 +4,7 @@ import {
   Routes,
 } from "react-router-dom";
 
+import InitialRedirect from "./components/InitialRedirect";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -16,10 +17,7 @@ function App() {
       <Route
         path="/"
         element={
-          <Navigate
-            to="/login"
-            replace
-          />
+          <InitialRedirect />
         }
       />
 
@@ -28,15 +26,23 @@ function App() {
         element={<Login />}
       />
 
-      <Route element={<ProtectedRoute />}>
+      <Route
+        element={
+          <ProtectedRoute />
+        }
+      >
         <Route
           path="/session"
-          element={<SessionSetup />}
+          element={
+            <SessionSetup />
+          }
         />
 
         <Route
           path="/dashboard"
-          element={<Dashboard />}
+          element={
+            <Dashboard />
+          }
         />
       </Route>
 
@@ -44,7 +50,7 @@ function App() {
         path="*"
         element={
           <Navigate
-            to="/login"
+            to="/"
             replace
           />
         }
